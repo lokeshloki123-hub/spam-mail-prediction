@@ -5,6 +5,8 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 ps = PorterStemmer()
+nltk.download('punkt')
+nltk.download('stopwords')
 
 stop_words = set(stopwords.words('english'))
 
@@ -44,3 +46,4 @@ if st.button("Predict"):
         st.header("spam")
     else:
         st.header("Not spam")
+
